@@ -1,0 +1,25 @@
+<!--Map viewport.-->
+
+<div id="map" class="map">
+
+</div>
+<app-loading-spinner *ngIf="showSpinner">
+
+</app-loading-spinner>
+
+<mat-toolbar class="toolbar" color="primary">
+  <span><mat-form-field>
+  <mat-select [(value)]="selected" placeholder="Mapmode" (selectionChange)="switchMapMode(selected)">
+    <mat-option value="borderless">Borderless</mat-option>
+    <mat-option value="sovereignties">Nations</mat-option>
+    <mat-option value="religions">Religion</mat-option>
+    <mat-option value="subfactions">Factions</mat-option>
+    <mat-option value="tradegoods">Trade</mat-option>
+    <mat-option value="provinces">Provinces</mat-option>
+    <mat-option value="cultures">Culture</mat-option>
+  </mat-select>
+</mat-form-field></span>
+  <span class="filler"></span>
+  <span>Edriel</span>
+</mat-toolbar>
+
